@@ -38,18 +38,7 @@ const Navbar = () => (
               </Link>
             ))}
           </div>
-          <div className="navbar-end">
-            <a
-              className="navbar-item"
-              href="https://github.com/GatsbyCentral/gatsby-starter-wordpress"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <img src={github} alt="Github" />
-              </span>
-            </a>
-          </div>
+          
         </div>
       </nav>
     )}
