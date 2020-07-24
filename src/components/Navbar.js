@@ -18,7 +18,7 @@ const Navbar = () => (
       }
     `}
     render={data => (
-      <nav className="navbar is-transparent">
+      <nav className="navbar" role="navigation">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
@@ -26,7 +26,14 @@ const Navbar = () => (
                 <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
               </figure>
             </Link>
-          </div>
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  
+        <div id="navbarBasicExample" class="navbar-menu">
           <div className="navbar-start">
             {data.allWordpressPage.edges.map(edge => (
               <Link
@@ -38,7 +45,7 @@ const Navbar = () => (
               </Link>
             ))}
           </div>
-          
+          </div>
         </div>
       </nav>
     )}
