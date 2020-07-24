@@ -15,7 +15,7 @@ export default class IndexPage extends React.Component {
           {posts.map(({ node: post }) => (
             <div
               className="content"
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+              style={{ border: '1px solid #eaecee' }}
               key={post.id}
             >
               <p>
@@ -31,15 +31,11 @@ export default class IndexPage extends React.Component {
                 </small>
               </p>
               <div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: post.excerpt.replace(/<p class="link-more.*/, ''),
-                  }}
-                />
+               
                 <Link className="button is-small" to={post.slug}>
                   Keep Reading →
                 </Link>
-              </div>
+             
             </div>
           ))}
         </div>
