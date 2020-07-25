@@ -10,7 +10,7 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+            <h1>{title}</h1>
           </div>
           {posts.map(({ node: post }) => (
             <div
@@ -30,13 +30,7 @@ export default class IndexPage extends React.Component {
                   </Link>
                 </small>
               </p>
-              <div>
-               
-                <Link className="button is-small" to={post.slug}>
-                  Keep Reading →
-                </Link>
              
-            </div>
           ))}
         </div>
       </section>
